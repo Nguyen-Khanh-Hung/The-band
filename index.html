@@ -89,7 +89,7 @@
                             <div class="place-heading">New York</div>
                             <div class="place-time">Fri 27 Nov 2016</div>
                             <div class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                            <a href="" class="place-buy-btn">Buy ticket</a>
+                            <button  class="place-buy-btn js-buy-ticket">Buy ticket</button>
                         </div>
                     </div>
                             <div class="place-item">
@@ -98,7 +98,7 @@
                                     <div class="place-heading">Paris</div>
                                     <div class="place-time">Sat 28 Nov 2016</div>
                                     <div class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                    <a href="" class="place-buy-btn">Buy ticket</a>
+                                    <button  class="place-buy-btn js-buy-ticket">Buy ticket</button>
                                 </div>
                             </div>
                                     <div class="place-item">
@@ -107,7 +107,7 @@
                                             <div class="place-heading">San Francisco</div>
                                             <div class="place-time">Sun 29 Nov 2016</div>
                                             <div class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                            <a href="" class="place-buy-btn">Buy ticket</a>                   
+                                            <button  class="place-buy-btn js-buy-ticket">Buy ticket</button>                   
                     </div>
                 </div>
                     
@@ -122,10 +122,72 @@
     </div>
 
     <div id="footer">
-
+ffasfas
+    </div>
     </div>
 
+    <div class="modal js-modal">
+        <div class="modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <header class="modal-header">
+                <i class="fa fa-briefcase" aria-hidden="true"></i>
+           <p class="modal-heading-ticket">Tickets</p> 
+            </header>
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many">
+                <label for="ticket-email" class="modal-label">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    Send to
+                </label>
+                <input id="ticket-email" type="text" class="modal-input" placeholder="Enter email">
+                
+                <button id="buy-tickets">Pay
+                    <i class="fa fa-check" aria-hidden="true"></i>
 
+                </button>
+             
+                
+            </div>
+               <!-- Footer -->
+               <footer class="modal-footer">
+                <p class="modal-help">Need  <a href="#">Help?</a> </p>
+               </footer>
+        </div>
     </div>
+    <script>
+        const buyBtns= document.querySelectorAll('.js-buy-ticket')
+        // 3 cái nút này đã được lưu lại vào biến buyBtns
+        // document là đại diện cho web này enen cỡ nào nó cũng phải đi qua
+        // queryselectorAll là để lấy 3 cái nút có class là....
+       
+        const modal=document.querySelector('.js-modal')
+
+        const modalClose=document.querySelector('.js-modal-close')
+
+        function closeBuyTickets(){
+            modal.classList.remove('open')
+        }
+
+      
+
+        function showBuyTickets(){
+           modal.classList.add('open')
+        }
+
+        for(const buyBtn of buyBtns){
+            buyBtn.addEventListener('click',showBuyTickets)
+        }
+
+        modalClose.addEventListener('click',closeBuyTickets)
+        // nó sẽ chạy lần lượt trong 3 cái nút,
+        // addEventListener là thêm 1 thằng để nó lắng nge cái click, khi mà 
+        // vào cái bút btn đó thì sau đó nó sẽ ra sao(1 cái hàm mới)
+    </script>
 </body>
 </html>

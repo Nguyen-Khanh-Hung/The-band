@@ -107,9 +107,9 @@ html{
     margin: 10px;
 }
 
-#content{
+/* #content{
    
-}
+} */
 #content .content-section{
     width: 800px;
     margin-left: auto;
@@ -222,6 +222,7 @@ html{
     padding: 11px 16px;
     margin-top: 15px;
     display: inline-block;
+    border: none;
 }
 .place-buy-btn:hover{
     background-color: #ccc;
@@ -229,4 +230,100 @@ html{
 }
 #footer{
 
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100%-1000px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadein ease 0.5s;
+   
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    font: 16px;
+    padding: 16px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.modal-close:hover{
+  opacity: 1;
+  background-color: #ccc;
+  color: #000;
+}
+.modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal-heading-ticket{
+    letter-spacing: 4px;
+    margin-left: 10px;
+}
+.modal-body{
+    padding: 16px;
+}
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+   margin-bottom: 24px;
+}
+#buy-tickets{
+    background-color: #009688;
+    width: 100%;
+    border-radius: 1px solid #ccc;
+    border: #ccc;
+    padding: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+#buy-tickets:hover{
+    opacity: 0.8;
+}
+.modal-footer{
+    float: right;
+    padding: 16px;
+    
+}
+.modal-help a{
+  color: #2196F3;  
+}
+
+@keyframes modalFadein {
+    from{
+        transform: translateY(-150px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
