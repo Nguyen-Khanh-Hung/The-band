@@ -69,16 +69,39 @@ html{
     left: 0;
     right: 0;
     z-index: 2;
+    /* overflow: hidden; */
     }
 #header .search-btn{
     float: right;
+    padding: 0 21px; 
+}
+#header .search-icon{
     color: white;
     line-height: 46.5px;
-    width: 61px;
-    text-align: center;
+    font-size: 20px;
 }
 #header .search-btn:hover{
     background-color: red;
+}
+
+#header .menu-btn{
+    float: right;
+    padding: 0 21px; 
+}
+
+#header .menu-icon{
+    color: white;
+    line-height: 46.5px;
+    font-size: 20px;
+}
+
+#header .menu-btn:hover {
+    background-color: #ccc;
+ 
+}
+
+#header .menu-btn:hover .menu-icon{
+    color: #000;
 }
 
 #nav{
@@ -103,7 +126,6 @@ html{
     display: inline-block;
 }
 #nav li{
-    
     position: relative; 
 }
 #nav .subbar li:hover a,
@@ -134,10 +156,10 @@ html{
     
 }
 #slider{
+    
     position: relative;
     padding-top: 50%;
   margin-top: 46.5px;
-  
   background: url('/The-band/assets/Img/Slider1.jpg') top center / cover no-repeat  ;
 }
 #slider .text-content{
@@ -159,9 +181,12 @@ html{
 } */
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0;
+    padding: 64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .section-heading{
     text-align: center;
@@ -264,18 +289,13 @@ html{
 /* map section */
 .map-section img{
     width: 100%;
+    margin-top: 30px;
 }
 
 
 
 /* contact */
-.contact-section{
-    margin-bottom: 200px;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 64px 0;
-}
+
 .contact-content{
     margin-top: 48px;
 }
@@ -298,6 +318,9 @@ html{
     border: 1px solid #ccc;
     width: 100%;
 }
+
+
+
 
 #footer{
     padding: 64px 16px;
@@ -401,6 +424,9 @@ html{
 #buy-tickets:hover{
     opacity: 0.8;
 }
+
+/* modal */
+
 .modal-footer{
     float: right;
     padding: 16px;
@@ -418,3 +444,4 @@ html{
         transform: translateY(0);
     }
 }
+

@@ -1,0 +1,46 @@
+/* Responsive */
+
+/* PC */
+@media (min-width:1024px) {
+  #header .menu-btn{
+   display: none;
+}
+}
+/* Tablet */
+@media (max-width:1023px) and (min-width:740px)
+{
+    #header .search-btn{ 
+        margin-right: 25px;
+    }
+    #header .menu-btn{
+      display: none;
+   }
+  #main {
+    overflow: hidden;
+  }
+   }
+
+/* Mobile */
+
+@media  (max-width:740px)
+{
+  #nav>li{
+    display: block;
+  }
+  .places-list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .member-list{
+    display: flex;
+    flex-direction: column;
+  }
+  #header .search-btn{
+    display: none;
+  }
+  #header{
+    overflow: hidden; 
+  }
+   
+}
