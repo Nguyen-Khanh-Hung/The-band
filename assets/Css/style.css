@@ -57,9 +57,7 @@ html{
 .pull-right{
     float: right!important;
 }
-#main{
 
-}
 
 #header{
     background-color: #000;
@@ -69,7 +67,7 @@ html{
     left: 0;
     right: 0;
     z-index: 2;
-    /* overflow: hidden; */
+  
     }
 #header .search-btn{
     float: right;
@@ -87,6 +85,9 @@ html{
 #header .menu-btn{
     float: right;
     padding: 0 21px; 
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #header .menu-icon{
@@ -94,6 +95,9 @@ html{
     line-height: 46.5px;
     font-size: 20px;
 }
+
+
+
 
 #header .menu-btn:hover {
     background-color: #ccc;
@@ -160,7 +164,7 @@ html{
     position: relative;
     padding-top: 50%;
   margin-top: 46.5px;
-  background: url('/The-band/assets/Img/Slider1.jpg') top center / cover no-repeat  ;
+  background: url('../Img/Slider1.jpg') top center / cover no-repeat  ;
 }
 #slider .text-content{
     position: absolute;

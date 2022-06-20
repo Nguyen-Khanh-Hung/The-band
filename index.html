@@ -16,7 +16,7 @@
     <div id="main">
     <div id="header">
             <ul id="nav">
-               
+   
                 <li><a href="#">Home</a></li>
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
@@ -244,7 +244,7 @@
     </script>
     <script>
           // Mobile responsive, 
-          var header=document.getElementById('header');
+        var header=document.getElementById('header');
         var mobileMenu=document.getElementById('mobile-menu');  
         var headerHeight=header.clientHeight;
      
@@ -264,8 +264,15 @@
         for (var i=0;i<menuItems.length; i++)
        {
         var menuItem=menuItems[i];
-        menuItem.onclick=function(){
-            header.style.height=null;
+
+        menuItem.onclick =function(event){
+            var isParentMenu=this.nextElementSibling && this.nextElementSibling.contains.classList('subbar')
+      if (isParentMenu){
+        event.preventDefault();
+      } else{
+        header.style.height=null;
+      }
+           
         }
        }
 
